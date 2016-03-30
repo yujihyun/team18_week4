@@ -22,7 +22,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
+  <plugins>
   <plugin>
   	<artifactId>maven-compiler-plugin</artifactId>
   	<configuration>
@@ -37,13 +37,13 @@
   	<version>0.7.6.201602180812</version>
   	<executions>
   		<execution>
-  		<id>default-prepare-agent</id>
-  		<goals>
-  			<goal>prepare-agent</goal>
-  		</goals>
+  			<id>default-prepare-agent</id>
+  			<goals>
+  				<goal>prepare-agent</goal>
+  			</goals>
   		</execution>
   	</executions>
   </plugin>
-  
+  </plugins>
 </project>
 
