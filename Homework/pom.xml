@@ -22,6 +22,8 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <build>
   <plugins>
   <plugin>
   	<artifactId>maven-compiler-plugin</artifactId>
@@ -45,5 +47,6 @@
   	</executions>
   </plugin>
   </plugins>
+  </build>
 </project>
 
