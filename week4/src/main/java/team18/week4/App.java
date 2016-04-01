@@ -1,4 +1,4 @@
-package team18.Homework;
+package team18.week4;
 
 /**
  * Hello world!
@@ -9,10 +9,5 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        
     }
 }
-
-
-
-
