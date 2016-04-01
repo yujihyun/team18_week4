@@ -2,30 +2,30 @@ package team18.Homework;
 
 public class Plan {
 
-	double plan_rate;
-	double additional_line_rate;
-	int base_minute;
-	double excess_minute_rate ;
-	int family_discount_line ;
-	double family_discount_line_rate;
+	double planRate;
+	double additionalLineRate;
+	int baseMinute;
+	double excessMinuteRate ;
+	int familyDiscountLine ;
+	double familyDiscountLineRate;
 	
 	public double base_rate(){
-		return this.plan_rate;
+		return this.planRate;
 	}
 	
 	public double calc_additional_lines_rate(int line){
-		if(line < this.family_discount_line)
-			return line * this.additional_line_rate;
+		if(line < this.familyDiscountLine)
+			return line * this.additionalLineRate;
 		else
-			return (this.family_discount_line-1)*this.additional_line_rate +
-					(line - this.family_discount_line + 1) * this.family_discount_line_rate;
+			return (this.familyDiscountLine-1)*this.additionalLineRate +
+					(line - this.familyDiscountLine + 1) * this.familyDiscountLineRate;
 	}
 	
 	public double calc_excess_minute(int minute){
-		if(minute <= this.base_minute)
+		if(minute <= this.baseMinute)
 			return 0;
 		else
-			return (minute - this.base_minute) * this.excess_minute_rate;
+			return (minute - this.baseMinute) * this.excessMinuteRate;
 	}
 
 }
