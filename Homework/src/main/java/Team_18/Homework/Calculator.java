@@ -21,11 +21,11 @@ public class Calculator {
 	public double calculate(){
 		if(this._plan != null){
 			if(this._plan.equals("gold")||this._plan.equals("Gold")){
-				Gold_Plan plan = new Gold_Plan();
+				GoldPlan plan = new GoldPlan();
 				return plan.base_rate() + plan.calc_additional_lines_rate(_number_of_line) + plan.calc_excess_minute(_minute);
 			}
 			if(this._plan.equals("silver")||this._plan.equals("Silver")){
-				Silver_Plan plan = new Silver_Plan();
+				SilverPlan plan = new SilverPlan();
 				return plan.base_rate() + plan.calc_additional_lines_rate(_number_of_line) + plan.calc_excess_minute(_minute);
 			}
 		}
