@@ -4,7 +4,7 @@ public class Calculator {
 
 	private String plan;
 	private int minute;
-	private int number_of_line;
+	private int numberOfLine;
 	
 	/**
 	 * 
@@ -15,18 +15,19 @@ public class Calculator {
 	public Calculator(String plan, int minute, int lines){
 		this.plan = plan;
 		this.minute = minute;
-		this.number_of_line = lines;
+		this.numberOfLine = lines;
 	}
 	
 	public double calculate(){
+		Plan plan;
 		
 		if("gold".equals(this.plan)||"Gold".equals(this.plan)){
-			GoldPlan plan = new GoldPlan();
-			return plan.base_rate() + plan.calcAdditionalLinesRate(number_of_line) + plan.calcExcessMinute(minute);
+			plan = new GoldPlan();
+			return plan.base_rate() + plan.calcAdditionalLinesRate(numberOfLine) + plan.calcExcessMinute(minute);
 		}
 		if("silver".equals(this.plan)||"Silver".equals(this.plan)){
-			SilverPlan plan = new SilverPlan();
-			return plan.base_rate() + plan.calcAdditionalLinesRate(number_of_line) + plan.calcExcessMinute(minute);
+			plan = new SilverPlan();
+			return plan.base_rate() + plan.calcAdditionalLinesRate(numberOfLine) + plan.calcExcessMinute(minute);
 		}
 		
 		return -1;
