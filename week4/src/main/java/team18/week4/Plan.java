@@ -13,7 +13,7 @@ public class Plan {
 		return this.planRate;
 	}
 	
-	public double calc_additional_lines_rate(int line){
+	public double calcAdditionalLinesRate(int line){
 		if(line < this.familyDiscountLine)
 			return line * this.additionalLineRate;
 		else
@@ -21,7 +21,7 @@ public class Plan {
 					(line - this.familyDiscountLine + 1) * this.familyDiscountLineRate;
 	}
 	
-	public double calc_excess_minute(int minute){
+	public double calcExcessMinute(int minute){
 		if(minute <= this.baseMinute)
 			return 0;
 		else

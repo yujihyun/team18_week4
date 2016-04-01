@@ -22,11 +22,11 @@ public class Calculator {
 		
 		if("gold".equals(this.plan)||"Gold".equals(this.plan)){
 			GoldPlan plan = new GoldPlan();
-			return plan.base_rate() + plan.calc_additional_lines_rate(number_of_line) + plan.calc_excess_minute(minute);
+			return plan.base_rate() + plan.calcAdditionalLinesRate(number_of_line) + plan.calcExcessMinute(minute);
 		}
 		if("silver".equals(this.plan)||"Silver".equals(this.plan)){
 			SilverPlan plan = new SilverPlan();
-			return plan.base_rate() + plan.calc_additional_lines_rate(number_of_line) + plan.calc_excess_minute(minute);
+			return plan.base_rate() + plan.calcAdditionalLinesRate(number_of_line) + plan.calcExcessMinute(minute);
 		}
 		
 		return -1;
