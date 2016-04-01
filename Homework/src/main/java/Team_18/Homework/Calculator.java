@@ -2,9 +2,9 @@ package Team_18.Homework;
 
 public class Calculator {
 
-	private String _plan;
-	private int _minute;
-	private int _number_of_line;
+	private String plan;
+	private int minute;
+	private int number_of_line;
 	
 	/**
 	 * 
@@ -13,22 +13,22 @@ public class Calculator {
 	 * @param int lines
 	 */
 	public Calculator(String plan, int minute, int lines){
-		this._plan = plan;
-		this._minute = minute;
-		this._number_of_line = lines;
+		this.plan = plan;
+		this.minute = minute;
+		this.number_of_line = lines;
 	}
 	
 	public double calculate(){
-		if(this._plan != null){
-			if(this._plan.equals("gold")||this._plan.equals("Gold")){
-				GoldPlan plan = new GoldPlan();
-				return plan.base_rate() + plan.calc_additional_lines_rate(_number_of_line) + plan.calc_excess_minute(_minute);
-			}
-			if(this._plan.equals("silver")||this._plan.equals("Silver")){
-				SilverPlan plan = new SilverPlan();
-				return plan.base_rate() + plan.calc_additional_lines_rate(_number_of_line) + plan.calc_excess_minute(_minute);
-			}
+		
+		if("gold".equals(this.plan)||"Gold".equals(this.plan)){
+			GoldPlan plan = new GoldPlan();
+			return plan.base_rate() + plan.calc_additional_lines_rate(number_of_line) + plan.calc_excess_minute(minute);
 		}
+		if("silver".equals(this.plan)||"Silver".equals(this.plan)){
+			SilverPlan plan = new SilverPlan();
+			return plan.base_rate() + plan.calc_additional_lines_rate(number_of_line) + plan.calc_excess_minute(minute);
+		}
+		
 		return -1;
 	}
 }

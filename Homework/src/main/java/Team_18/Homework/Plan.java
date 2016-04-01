@@ -28,5 +28,4 @@ public class Plan {
 			return (minute - this.base_minute) * this.excess_minute_rate;
 	}
 
-	
 }

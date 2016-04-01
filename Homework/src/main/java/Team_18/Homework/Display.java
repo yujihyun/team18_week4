@@ -2,31 +2,31 @@ package Team_18.Homework;
 
 public class Display {
 	// 회선수, 통화량, 등급
-		private int _LineNum, _MinUsed;
-		private String _Plan;
-		private Double _ResultBill;
+		private int lineNum, minUsed;
+		private String plan;
+		private Double resultBill;
 		
 		// 등급, 통화량, 회선수 순으로 입력
 		public Display(String InputPlan, int InputMinUsed, int InputLineNum) {
-			this._LineNum = InputLineNum;
-			this._MinUsed = InputMinUsed;
-			this._Plan = InputPlan;
+			this.lineNum = InputLineNum;
+			this.minUsed = InputMinUsed;
+			this.plan = InputPlan;
 		}
 		
 		//setter
-		public void setLineNum(int input){ this._LineNum = input; }
-		public void setMinUsed(int input){ this._MinUsed = input; }
-		public void setPlan(String input){ this._Plan = input; }
-		public void setResultBill(Double input){ this._ResultBill = input; }
+		public void setLineNum(int input){ this.lineNum = input; }
+		public void setMinUsed(int input){ this.minUsed = input; }
+		public void setPlan(String input){ this.plan = input; }
+		public void setResultBill(Double input){ this.resultBill = input; }
 		//getter
-		public int getLineNum(){ return this._LineNum; }
-		public int getMinUsed(){ return this._MinUsed; }
-		public String getPlan(){ return this._Plan; }
-		public Double getResultBill(){ return this._ResultBill; }
+		public int getLineNum(){ return this.lineNum; }
+		public int getMinUsed(){ return this.minUsed; }
+		public String getPlan(){ return this.plan; }
+		public Double getResultBill(){ return this.resultBill; }
 		
 
 		public void DisplayResult(){
-			Calculator cal = new Calculator(this._Plan, this._MinUsed, this._LineNum);
+			Calculator cal = new Calculator(this.plan, this.minUsed, this.lineNum);
 			setResultBill(cal.calculate());
 			
 			System.out.println("Plan : " + getPlan());
