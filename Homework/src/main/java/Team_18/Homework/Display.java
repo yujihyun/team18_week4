@@ -13,12 +13,6 @@ public class Display {
 			this._Plan = InputPlan;
 		}
 		
-		public Display() {
-			this._LineNum = 1;
-			this._MinUsed = 0;
-			this._Plan = "Silver";
-		}
-		
 		//setter
 		public void setLineNum(int input){ this._LineNum = input; }
 		public void setMinUsed(int input){ this._MinUsed = input; }
@@ -30,13 +24,11 @@ public class Display {
 		public String getPlan(){ return this._Plan; }
 		public Double getResultBill(){ return this._ResultBill; }
 		
-		
-		public void Calc(){
+
+		public void DisplayResult(){
 			Calculator cal = new Calculator(this._Plan, this._MinUsed, this._LineNum);
 			setResultBill(cal.calculate());
-		}
-		
-		public void DisplayResult(){
+			
 			System.out.println("Plan : " + getPlan());
 			System.out.println("Minutes Used : " + getMinUsed());
 			System.out.println("Number Of Lines : " + getLineNum());

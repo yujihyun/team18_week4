@@ -34,7 +34,7 @@ public class phoneInput {
             
       System.out.print("Number of Lines: ");
       numberLine = in.nextInt();
-      while(usedMinute<0){
+      while(numberLine<0){
          System.out.println("다시 입력하세요.");
          System.out.print("Number of Lines: ");
          numberLine = in.nextInt();
