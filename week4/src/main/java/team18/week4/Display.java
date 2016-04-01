@@ -26,7 +26,7 @@ public class Display {
 		public Double getResultBill(){ return this.resultBill; }
 		
 
-		public void DisplayResult(){
+		public void displayResult(){
 			Calculator cal = new Calculator(this.plan, this.minUsed, this.lineNum);
 			setResultBill(cal.calculate());
 			

@@ -19,15 +19,15 @@ public class Calculator {
 	}
 	
 	public double calculate(){
-		Plan plan;
+		Plan userPlan;
 		
 		if("gold".equals(this.plan)||"Gold".equals(this.plan)){
-			plan = new GoldPlan();
-			return plan.base_rate() + plan.calcAdditionalLinesRate(numberOfLine) + plan.calcExcessMinute(minute);
+			userPlan = new GoldPlan();
+			return userPlan.base_rate() + userPlan.calcAdditionalLinesRate(numberOfLine) + userPlan.calcExcessMinute(minute);
 		}
 		if("silver".equals(this.plan)||"Silver".equals(this.plan)){
-			plan = new SilverPlan();
-			return plan.base_rate() + plan.calcAdditionalLinesRate(numberOfLine) + plan.calcExcessMinute(minute);
+			userPlan = new SilverPlan();
+			return userPlan.base_rate() + userPlan.calcAdditionalLinesRate(numberOfLine) + userPlan.calcExcessMinute(minute);
 		}
 		
 		return -1;
