@@ -1,4 +1,4 @@
-package Team_18.Homework;
+package team18.Homework;
 
 public class Display {
 	// 회선수, 통화량, 등급

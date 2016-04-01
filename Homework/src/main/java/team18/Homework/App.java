@@ -1,4 +1,4 @@
-package Team_18.Homework;
+package team18.Homework;
 
 /**
  * Hello world!
