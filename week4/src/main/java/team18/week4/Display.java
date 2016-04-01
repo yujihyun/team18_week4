@@ -1,4 +1,4 @@
-package team18.Homework;
+package team18.week4;
 
 public class Display {
 	// 회선수, 통화량, 등급

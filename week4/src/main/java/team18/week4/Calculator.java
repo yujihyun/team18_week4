@@ -1,4 +1,4 @@
-package team18.Homework;
+package team18.week4;
 
 public class Calculator {
 
