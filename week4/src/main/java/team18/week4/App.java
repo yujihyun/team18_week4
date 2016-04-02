@@ -1,4 +1,4 @@
-package Team_18.Homework;
+package team18.week4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,36 +15,42 @@ public class App
 		Scanner in = new Scanner(System.in);
 		InputStreamReader insr = new InputStreamReader(System.in);
 		BufferedReader inbr = new BufferedReader(insr);
+		Display display;
 
 		String plan;
 		int usedMinute;
 		int numberLine;
 		
-		logger.log("Plan: ");
+		System.out.print("Plan: ");
 		plan = inbr.readLine();
 		
 		while(!(plan.equals("Gold")|| plan.equals("gold") || plan.equals("Silver") || plan.equals("silver"))){
-			logger.log("다시 입력하세요.");
-			logger.log("Plan: ");
+			System.out.print("다시 입력하세요.");
+			System.out.print("Plan: ");
 			plan = inbr.readLine();
 		}
 		
-		logger.log("Minutes Used: ");
+		System.out.print("Minutes Used: ");
 		usedMinute = in.nextInt();
 		
 		while(usedMinute<0){
-			logger.log("다시 입력하세요.");
-			logger.log("Minutes Used: ");
+			System.out.print("다시 입력하세요.");
+			System.out.print("Minutes Used: ");
 			usedMinute = in.nextInt();
 		}
 				
-		logger.log("Number of Lines: ");
+		System.out.print("Number of Lines: ");
 		numberLine = in.nextInt();
-		while(usedMinute<0){
-			logger.log("다시 입력하세요.");
-			logger.log("Number of Lines: ");
+		while(numberLine<0){
+			System.out.print("다시 입력하세요.");
+			System.out.print("Number of Lines: ");
 			numberLine = in.nextInt();
 		}
+		
+		display = new Display(plan, usedMinute, numberLine);	
+		display.displayResult();
+		
+		in.close();
 		
 	}	
 }

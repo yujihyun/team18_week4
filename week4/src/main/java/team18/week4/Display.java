@@ -30,7 +30,7 @@ public class Display {
 			Calculator cal = new Calculator(this.plan, this.minUsed, this.lineNum);
 			setResultBill(cal.calculate());
 			
-			System.out.println("Plan : " + getPlan());
+			System.out.println("\nPlan : " + getPlan());
 			System.out.println("Minutes Used : " + getMinUsed());
 			System.out.println("Number Of Lines : " + getLineNum());
 			System.out.println("Expected Bill : " + getResultBill());
