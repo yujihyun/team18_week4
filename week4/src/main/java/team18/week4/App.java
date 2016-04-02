@@ -9,8 +9,12 @@ import java.util.Scanner;
  * Hello world!
  *
  */
-public class App 
+class App 
 {
+	private App(){
+		
+	}
+	
 	public static void main(String[] args) throws IOException{
 		Scanner in = new Scanner(System.in);
 		InputStreamReader insr = new InputStreamReader(System.in);
