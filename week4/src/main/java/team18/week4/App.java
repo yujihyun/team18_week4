@@ -24,7 +24,7 @@ public class App
 		System.out.print("Plan: ");
 		plan = inbr.readLine();
 		
-		while(!(plan.equals("Gold")|| plan.equals("gold") || plan.equals("Silver") || plan.equals("silver"))){
+		while(!("Gold".equals(plan) || "gold".equals(plan) || "Silver".equals(plan) || "silver".equals(plan))){
 			System.out.print("다시 입력하세요.");
 			System.out.print("Plan: ");
 			plan = inbr.readLine();
