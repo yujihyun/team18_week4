@@ -11,9 +11,7 @@ import java.util.Scanner;
  */
 class App 
 {
-	private App(){
-		
-	}
+
 	
 	public static void main(String[] args) throws IOException{
 		Scanner in = new Scanner(System.in);

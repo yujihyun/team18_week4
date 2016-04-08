@@ -21,7 +21,7 @@ public class Plan {
 					(line - this.familyDiscountLine + 1) * this.familyDiscountLineRate;
 	}
 	
-	public double calcExcessMinute(int minute){
+	public double calcExcessMinuteRate(int minute){
 		if(minute <= this.baseMinute)
 			return 0;
 		else
