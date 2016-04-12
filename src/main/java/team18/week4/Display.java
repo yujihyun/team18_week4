@@ -13,12 +13,17 @@ public class Display {
 			this.minUsed = inputMinUsed;
 			this.plan = inputPlan;
 		}
+		public Display() {
+			this.lineNum = 0;
+			this.minUsed = 0;
+			this.plan = null;
+		}
 		
 		//setter
 		public void setLineNum(int input){ this.lineNum = input; }
 		public void setMinUsed(int input){ this.minUsed = input; }
 		public void setPlan(String input){ this.plan = input; }
-		public void setResultBill(Double input){ this.resultBill = input; }
+		private void setResultBill(Double input){ this.resultBill = input; }
 		//getter
 		public int getLineNum(){ return this.lineNum; }
 		public int getMinUsed(){ return this.minUsed; }
