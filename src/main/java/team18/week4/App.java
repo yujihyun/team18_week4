@@ -1,4 +1,4 @@
-package team18.week4;
+﻿package team18.week4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,15 +9,44 @@ import java.util.Scanner;
  * Hello world!
  *
  */
-class App 
-{
-
+class App {
+	static Scanner in = new Scanner(System.in);
+	static InputStreamReader insr = new InputStreamReader(System.in);
+	static BufferedReader inbr = new BufferedReader(insr);
+	
+	static String checkPlan(String plan) throws IOException{
+		
+		while(!(plan.equals("Gold")|| plan.equals("gold") || plan.equals("Silver") || plan.equals("silver"))){
+			System.out.println("다시 입력하세요.");
+			System.out.print("Plan: ");
+			plan = inbr.readLine();
+		}
+		return plan;
+	}
+	
+	static int checkMinute(int usedMinute) throws IOException{
+		
+		while(usedMinute<0){
+			System.out.println("다시 입력하세요.");
+			System.out.print("Minutes Used: ");
+			usedMinute = in.nextInt();
+		}
+			
+		return usedMinute;
+	}
+	
+	static int checkLine(int numberLine) throws IOException{
+		while(numberLine<0){
+			System.out.println("다시 입력하세요.");
+			System.out.print("Number of Lines: ");
+			numberLine = in.nextInt();
+		}	
+		return numberLine;
+	}
+	
 	
 	public static void main(String[] args) throws IOException{
-		Scanner in = new Scanner(System.in);
-		InputStreamReader insr = new InputStreamReader(System.in);
-		BufferedReader inbr = new BufferedReader(insr);
-		Display display;
+
 
 		String plan;
 		int usedMinute;
@@ -25,34 +54,17 @@ class App
 		
 		System.out.print("Plan: ");
 		plan = inbr.readLine();
-		
-		while(!("Gold".equals(plan) || "gold".equals(plan) || "Silver".equals(plan) || "silver".equals(plan))){
-			System.out.print("다시 입력하세요.");
-			System.out.print("Plan: ");
-			plan = inbr.readLine();
-		}
-		
+		plan=checkPlan(plan);
+			
 		System.out.print("Minutes Used: ");
 		usedMinute = in.nextInt();
-		
-		while(usedMinute<0){
-			System.out.print("다시 입력하세요.");
-			System.out.print("Minutes Used: ");
-			usedMinute = in.nextInt();
-		}
-				
+		usedMinute = checkMinute(usedMinute);
+			
 		System.out.print("Number of Lines: ");
 		numberLine = in.nextInt();
-		while(numberLine<0){
-			System.out.print("다시 입력하세요.");
-			System.out.print("Number of Lines: ");
-			numberLine = in.nextInt();
-		}
-		
-		display = new Display(plan, usedMinute, numberLine);	
-		display.displayResult();
-		
-		in.close();
+		numberLine = checkLine(numberLine);
 		
 	}	
+	
+	
 }
