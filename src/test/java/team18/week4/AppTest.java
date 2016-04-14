@@ -17,12 +17,16 @@ public class AppTest {
 		App app = new App();
 		assertEquals(app.checkPlan("Gold"),"Gold", 0);
 		assertEquals(app.checkPlan("Silver"),"Silver", 0);
+		assertEquals(app.checkPlan("default"),null, 0);
 		
 		assertEquals(app.checkMinute(30),30, 0);
-		assertEquals(app.checkMinute(5),5, 0);
-		
+		assertEquals(app.checkMinute(5),5, 0);	
+		assertEquals(app.checkMinute(-3),-1, 0);
+			
+
 		assertEquals(app.checkLine(2),2, 0);
 		assertEquals(app.checkLine(3),3, 0);
+		assertEquals(app.checkLine(-2),-1, 0);
 		
 	}
 
