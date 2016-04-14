@@ -16,18 +16,16 @@ class App {
 	
 	static String checkPlan(String plan) throws IOException{
 		
-		while(!(plan.equals("Gold")|| plan.equals("gold") || plan.equals("Silver") || plan.equals("silver"))){
-			System.out.print("Plan: ");
-			plan = inbr.readLine();
+		if(!(plan.equals("Gold")|| plan.equals("gold") || plan.equals("Silver") || plan.equals("silver"))){
+			return null;
 		}
 		return plan;
 	}
 	
 	static int checkMinute(int usedMinute) throws IOException{
 		
-		while(usedMinute<0){
-			System.out.print("Minutes Used: ");
-			usedMinute = in.nextInt();
+		if(usedMinute<0){
+			return -1;
 		}
 			
 		return usedMinute;
@@ -35,8 +33,7 @@ class App {
 	
 	static int checkLine(int numberLine) throws IOException{
 		while(numberLine<0){
-			System.out.print("Number of Lines: ");
-			numberLine = in.nextInt();
+			return -1;
 		}	
 		return numberLine;
 	}
