@@ -17,7 +17,6 @@ class App {
 	static String checkPlan(String plan) throws IOException{
 		
 		while(!(plan.equals("Gold")|| plan.equals("gold") || plan.equals("Silver") || plan.equals("silver"))){
-			System.out.println("다시 입력하세요.");
 			System.out.print("Plan: ");
 			plan = inbr.readLine();
 		}
@@ -27,7 +26,6 @@ class App {
 	static int checkMinute(int usedMinute) throws IOException{
 		
 		while(usedMinute<0){
-			System.out.println("다시 입력하세요.");
 			System.out.print("Minutes Used: ");
 			usedMinute = in.nextInt();
 		}
@@ -37,7 +35,6 @@ class App {
 	
 	static int checkLine(int numberLine) throws IOException{
 		while(numberLine<0){
-			System.out.println("다시 입력하세요.");
 			System.out.print("Number of Lines: ");
 			numberLine = in.nextInt();
 		}	
